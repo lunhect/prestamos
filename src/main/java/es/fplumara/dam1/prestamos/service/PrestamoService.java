@@ -27,7 +27,8 @@ public class PrestamoService {
         } else if (!materialRepository.findById(idMaterial).get().getEstado().equals(EstadoMaterial.DISPONIBLE)) {
             throw new MaterialNoDisponibleException("");
         } else {
-          Prestamo Prestamos = new Prestamo(UUID.randomUUID().t)
+            Prestamo Prestamos = new Prestamo(UUID.randomUUID().toString())
 
         }
     }
+}

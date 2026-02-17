@@ -12,4 +12,12 @@ public class Prestamo implements Identificable {
     public String getId() {
         return "";
     }
+
+
+
+
+
+
+
+
 }
