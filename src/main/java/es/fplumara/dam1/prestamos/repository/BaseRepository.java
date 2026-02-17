@@ -23,13 +23,9 @@ public class BaseRepository<T extends Identificable> implements Repository<T> {
 
     @Override
     public Optional<T> findById(String id) {
-        Optional<T> fortnite = Optional.empty(); //empty: vacio
-        fortnite = Optional.of(datos.get(id));
-
-        return fortnite;
-
+        T encontrado = datos.get(id);
+        return Optional.ofNullable(encontrado);
     }
-
 
     @Override
     public List<T> listAll() { //pasado los datos de map a lista
