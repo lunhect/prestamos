@@ -7,8 +7,13 @@ private int ramGB;
         return ramGB;
     }
 
+    public Portatil(int ramGB) {
+        this.ramGB = ramGB;
+    }
+
     @Override
     String getTipo() {
-        return "";
+        return "Portatil";
+
     }
 }

@@ -13,6 +13,6 @@ public class Proyector extends Material  {
 
     @Override
     String getTipo() {
-        return "";
+        return "Proyector";
     }
 }
