@@ -8,6 +8,10 @@ public abstract class Material implements Identificable  {
       EstadoMaterial estado;
       Set<String> etiquetas;
 
+    public Material() {
+
+    }
+
     public String getId() {
         return id;
     }

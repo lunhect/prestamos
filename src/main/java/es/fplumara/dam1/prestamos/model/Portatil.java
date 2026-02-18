@@ -8,6 +8,7 @@ private int ramGB;
     }
 
     public Portatil(int ramGB) {
+        super();
         this.ramGB = ramGB;
     }
 
