@@ -13,6 +13,9 @@ public class Main {
          * FLUJO MÍNIMO OBLIGATORIO (lo que debe hacer tu main)
          *
          * 1) Crear repositorios en memoria
+         *
+
+
          *    - Crear MaterialRepositoryImpl (almacena materiales en memoria).
          *    - Crear PrestamoRepositoryImpl (almacena préstamos en memoria).
          *

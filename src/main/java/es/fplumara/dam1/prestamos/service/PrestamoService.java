@@ -18,7 +18,10 @@ public class PrestamoService {
     private Repository<Material> materialRepository;
     private Repository<Prestamo>  prestamoRepository;
 
-
+    public PrestamoService(Repository<Material> materialRepository, Repository<Prestamo> prestamoRepository) {
+        this.materialRepository = materialRepository;
+        this.prestamoRepository = prestamoRepository;
+    }
 
     public void crearPrestamo(String idMaterial, String profesor, LocalDate fecha) {
 
