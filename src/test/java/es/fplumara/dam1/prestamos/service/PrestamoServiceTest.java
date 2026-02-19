@@ -108,8 +108,11 @@ class PrestamosServiceTest {
 
     void devolverMaterial_ok_cambiaAdisponible(){
 
+    when(materialRepository.findById("0064")).thenReturn(Optional.of(new Proyector("0064", "ACER",EstadoMaterial.PRESTADO,new HashSet<>(), 8)));
 
+    prestamoService.devolverMaterial("0064");
 
+    assertEquals(materialRepository.findById("0064").get().getEstado(), EstadoMaterial.DISPONIBLE);
 
 
 
