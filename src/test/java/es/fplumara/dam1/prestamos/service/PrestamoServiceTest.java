@@ -3,9 +3,7 @@ package es.fplumara.dam1.prestamos.service;
 import es.fplumara.dam1.prestamos.exception.MaterialNoDisponibleException;
 import es.fplumara.dam1.prestamos.exception.NoEncontradoException;
 import es.fplumara.dam1.prestamos.model.*;
-import es.fplumara.dam1.prestamos.repository.MaterialRepositoryImpl;
 import es.fplumara.dam1.prestamos.repository.Repository;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -42,7 +40,7 @@ class PrestamosServiceTest {
     //antes de cada TEST,
     @BeforeEach
     void setUp() {
-        prestamoService = new PrestamoService(materialRepository, prestamoRepository);
+        prestamoService = new PrestamoService(prestamoRepository);
     }
 //setUp se ejecuta antes de cada test
 

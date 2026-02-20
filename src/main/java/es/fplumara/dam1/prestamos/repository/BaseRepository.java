@@ -29,10 +29,11 @@ public class BaseRepository<T extends Identificable> implements Repository<T> {
 
     @Override
     public List<T> listAll() { //pasado los datos de map a lista
-        List<T> todos = new ArrayList<>(datos.values());
 
 
-        return todos;
+
+    return datos.values().stream().toList();
+
     }
 
     @Override

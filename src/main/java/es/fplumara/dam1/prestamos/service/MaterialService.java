@@ -21,7 +21,13 @@ public class MaterialService {
     private Repository<Material> materialRepository;
 
 
-    //reglas
+   //MAIN
+    public MaterialService(Repository<Material> materialRepository) {
+       this.materialRepository = materialRepository;
+    }
+
+
+    //reglasthoi
 
     void registrarMaterial(Material m) {
 

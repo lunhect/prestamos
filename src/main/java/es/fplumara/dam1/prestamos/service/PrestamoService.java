@@ -5,7 +5,6 @@ import es.fplumara.dam1.prestamos.exception.NoEncontradoException;
 import es.fplumara.dam1.prestamos.model.EstadoMaterial;
 import es.fplumara.dam1.prestamos.model.Material;
 import es.fplumara.dam1.prestamos.model.Prestamo;
-import es.fplumara.dam1.prestamos.repository.MaterialRepositoryImpl;
 import es.fplumara.dam1.prestamos.repository.Repository;
 
 import java.time.LocalDate;
@@ -18,7 +17,7 @@ public class PrestamoService {
     private Repository<Material> materialRepository;
     private Repository<Prestamo>  prestamoRepository;
 
-    public PrestamoService(Repository<Material> materialRepository, Repository<Prestamo> prestamoRepository) {
+    public PrestamoService(Repository<Prestamo> prestamoRepository) {
         this.materialRepository = materialRepository;
         this.prestamoRepository = prestamoRepository;
     }
