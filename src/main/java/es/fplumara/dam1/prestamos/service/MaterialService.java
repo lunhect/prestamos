@@ -20,10 +20,14 @@ public class MaterialService {
     //repo de materiales para pruebas
     private Repository<Material> materialRepository;
 
+    public MaterialService(Repository<Material> materialRepository) {
+    this .materialRepository = materialRepository; //
+    }
+
 
     //reglas
 
-    void registrarMaterial(Material m) {
+    public void registrarMaterial(Material m) {
 
         // mismo id = Duplicado exception
 

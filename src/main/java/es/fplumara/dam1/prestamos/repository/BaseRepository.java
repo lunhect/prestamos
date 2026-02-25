@@ -8,7 +8,6 @@ import java.util.Map;
 import java.util.Optional;
 
 
-// REPASO PROBLEMAS FORTNITEEEEEEE
 
 
 public class BaseRepository<T extends Identificable> implements Repository<T> {
