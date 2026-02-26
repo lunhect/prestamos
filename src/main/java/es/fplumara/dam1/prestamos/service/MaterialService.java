@@ -56,7 +56,7 @@ public class MaterialService {
     }
 
 
-List<Material> listar(){
+public List<Material> listar(){
         return materialRepository.listAll();
 
 
