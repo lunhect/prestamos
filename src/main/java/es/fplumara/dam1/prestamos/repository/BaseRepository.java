@@ -2,17 +2,11 @@ package es.fplumara.dam1.prestamos.repository;
 
 import es.fplumara.dam1.prestamos.model.Identificable;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
-
-
-// REPASO PROBLEMAS FORTNITEEEEEEE
+import java.util.*;
 
 
 public class BaseRepository<T extends Identificable> implements Repository<T> {
-    Map<String, T> datos;
+    Map<String, T> datos = new HashMap<>();
 
 
     @Override

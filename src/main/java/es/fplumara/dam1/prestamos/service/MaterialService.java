@@ -20,21 +20,25 @@ public class MaterialService {
     //repo de materiales para pruebas
     private Repository<Material> materialRepository;
 
+    public MaterialService(Repository<Material> materialRepository) {
+    this .materialRepository = materialRepository; //
+    }
+
 
     //reglas
 
-    void registrarMaterial(Material m) {
+    public void registrarMaterial(Material m) {
 
-        // mismo id = Duplicado exception
+
 
         if (materialRepository.findById(m.getId()).equals(m)) {
             throw new DuplicadoException();
-        } else if (m == null || m.getId() == null || m.getId().isEmpty()) {
+        } else if (m == null || m.getId() == null || m.getId().isBlank()) {
             throw new IllegalArgumentException();
 
         }
 
-
+          materialRepository.save(m);
     }
 
  //repaso casa
@@ -52,7 +56,7 @@ public class MaterialService {
     }
 
 
-List<Material> listar(){
+public List<Material> listar(){
         return materialRepository.listAll();
 
 

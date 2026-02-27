@@ -56,7 +56,7 @@ public class PrestamoService {
         }
     }
 
-    void  devolverMaterial(String idMaterial){
+    public void  devolverMaterial(String idMaterial){
 
         if (idMaterial == null || idMaterial.isBlank()) {
 
@@ -83,7 +83,7 @@ public class PrestamoService {
 
     }
 
-    List<Prestamo>listarPrestamos(){
+    public List<Prestamo>listarPrestamos(){
 
         return prestamoRepository.listAll();
     }
