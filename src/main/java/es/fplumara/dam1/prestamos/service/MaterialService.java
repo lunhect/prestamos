@@ -29,16 +29,16 @@ public class MaterialService {
 
     public void registrarMaterial(Material m) {
 
-        // mismo id = Duplicado exception
+
 
         if (materialRepository.findById(m.getId()).equals(m)) {
             throw new DuplicadoException();
-        } else if (m == null || m.getId() == null || m.getId().isEmpty()) {
+        } else if (m == null || m.getId() == null || m.getId().isBlank()) {
             throw new IllegalArgumentException();
 
         }
 
-
+          materialRepository.save(m);
     }
 
  //repaso casa

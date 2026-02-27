@@ -62,6 +62,9 @@ public class Main {
         List<RegistroMaterialCsv> registroMaterialCsvs = csvMaterialImporter.leer("data/materiales.csv");
 
 
+
+
+
         // for y dentro el if
 
         for (RegistroMaterialCsv p : registroMaterialCsvs) { // Convertir cada registro a tu modelo:
@@ -77,7 +80,7 @@ public class Main {
                                 p.extra() // lumens
                         )
                 );
-                System.out.println("Material PROYECTOR registrado: " + p.id()); // Verifica el ID registrado
+
             } else if (p.tipo().equalsIgnoreCase("PORTATIL")) {
 
                 materialService.registrarMaterial(
@@ -89,9 +92,10 @@ public class Main {
                                 p.extra() // ramGB
                         )
                 );
-                System.out.println("Material PORTATIL registrado: " + p.id()); // Verifica el ID registrado
+
             }
         }
+
 
 // 4) Crear un préstamo
         //        *    - Elegir un id de material existente (por ejemplo "M001").
